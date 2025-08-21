@@ -1,7 +1,10 @@
 from fastapi.testclient import TestClient
 from uuid import uuid4
 
+import sys, os
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from main import app
+
 
 client = TestClient(app)
 
